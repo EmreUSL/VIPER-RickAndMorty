@@ -8,7 +8,6 @@
 import Foundation
 
 struct GetAllCharactersResponse: Codable {
-    
     let info: Info
     let results: [Character]
 }

@@ -31,7 +31,6 @@ struct Character: Codable {
     let origin: Origin
     let location: Location
     let image: String
-    let episode: [String]
     let url: String
     let created: String
 }

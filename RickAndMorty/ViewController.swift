@@ -13,16 +13,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        Service.shared.execute(.listCharactersRequest, type: GetAllCharactersResponse.self) { result in
-            
+        Service.shared.getService(characterId: 1, type: GetAllCharactersResponse.self) { result in
             switch result {
-                
-            case .success(let model):
-                print(String(describing: model))
+            case .success(let result):
+                print(result.results)
             case .failure(let error):
                 print(error)
             }
         }
+    
     }
 
 
