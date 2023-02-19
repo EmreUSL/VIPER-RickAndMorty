@@ -20,6 +20,18 @@
 		64B9B06C29A1851F00C1A54F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B9B06B29A1851F00C1A54F /* Request.swift */; };
 		64B9B07129A186A400C1A54F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B9B07029A186A400C1A54F /* Character.swift */; };
 		64B9B07A29A1955B00C1A54F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B9B07929A1955B00C1A54F /* Response.swift */; };
+		64DFE1A429A28A56009F3258 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DFE1A229A28A56009F3258 /* SplashView.swift */; };
+		64DFE1A529A28A56009F3258 /* SplashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64DFE1A329A28A56009F3258 /* SplashView.xib */; };
+		64DFE1A729A28A61009F3258 /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DFE1A629A28A61009F3258 /* SplashInteractor.swift */; };
+		64DFE1A929A28A69009F3258 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DFE1A829A28A69009F3258 /* SplashPresenter.swift */; };
+		64DFE1AB29A28A71009F3258 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DFE1AA29A28A71009F3258 /* SplashRouter.swift */; };
+		64DFE1AD29A290AD009F3258 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64DFE1AC29A2906A009F3258 /* Pacifico-Regular.ttf */; };
+		64DFE1B029A293B3009F3258 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DFE1AF29A293B3009F3258 /* UIView+Ext.swift */; };
+		64DFE1BB29A294FB009F3258 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DFE1BA29A294FB009F3258 /* HomeInteractor.swift */; };
+		64DFE1BE29A29572009F3258 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DFE1BC29A29572009F3258 /* HomeView.swift */; };
+		64DFE1BF29A29572009F3258 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64DFE1BD29A29572009F3258 /* HomeView.xib */; };
+		64DFE1C129A2957E009F3258 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DFE1C029A2957E009F3258 /* HomePresenter.swift */; };
+		64DFE1C329A29584009F3258 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DFE1C229A29584009F3258 /* HomeRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +69,18 @@
 		64B9B06B29A1851F00C1A54F /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		64B9B07029A186A400C1A54F /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		64B9B07929A1955B00C1A54F /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		64DFE1A229A28A56009F3258 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		64DFE1A329A28A56009F3258 /* SplashView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashView.xib; sourceTree = "<group>"; };
+		64DFE1A629A28A61009F3258 /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
+		64DFE1A829A28A69009F3258 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		64DFE1AA29A28A71009F3258 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
+		64DFE1AC29A2906A009F3258 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pacifico-Regular.ttf"; path = "../../../../../Downloads/Pacifico/Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		64DFE1AF29A293B3009F3258 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		64DFE1BA29A294FB009F3258 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		64DFE1BC29A29572009F3258 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		64DFE1BD29A29572009F3258 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
+		64DFE1C029A2957E009F3258 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		64DFE1C229A29584009F3258 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +131,10 @@
 		64B9B03729A184BC00C1A54F /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
+				64DFE1AE29A293A9009F3258 /* Extension */,
 				64B9B06829A184E300C1A54F /* API */,
 				64B9B06F29A1868A00C1A54F /* Entity */,
+				64DFE1A029A289C3009F3258 /* Scene */,
 				64B9B03829A184BC00C1A54F /* AppDelegate.swift */,
 				64B9B03A29A184BC00C1A54F /* SceneDelegate.swift */,
 				64B9B03C29A184BC00C1A54F /* ViewController.swift */,
@@ -116,6 +142,7 @@
 				64B9B04129A184BD00C1A54F /* Assets.xcassets */,
 				64B9B04329A184BD00C1A54F /* LaunchScreen.storyboard */,
 				64B9B04629A184BD00C1A54F /* Info.plist */,
+				64DFE1AC29A2906A009F3258 /* Pacifico-Regular.ttf */,
 			);
 			path = RickAndMorty;
 			sourceTree = "<group>";
@@ -161,6 +188,47 @@
 				64B9B07929A1955B00C1A54F /* Response.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		64DFE1A029A289C3009F3258 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				64DFE1A129A289CF009F3258 /* Splash */,
+				64DFE1B129A294AE009F3258 /* Home */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		64DFE1A129A289CF009F3258 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				64DFE1A229A28A56009F3258 /* SplashView.swift */,
+				64DFE1A329A28A56009F3258 /* SplashView.xib */,
+				64DFE1A629A28A61009F3258 /* SplashInteractor.swift */,
+				64DFE1A829A28A69009F3258 /* SplashPresenter.swift */,
+				64DFE1AA29A28A71009F3258 /* SplashRouter.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		64DFE1AE29A293A9009F3258 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				64DFE1AF29A293B3009F3258 /* UIView+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		64DFE1B129A294AE009F3258 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				64DFE1BC29A29572009F3258 /* HomeView.swift */,
+				64DFE1BD29A29572009F3258 /* HomeView.xib */,
+				64DFE1BA29A294FB009F3258 /* HomeInteractor.swift */,
+				64DFE1C029A2957E009F3258 /* HomePresenter.swift */,
+				64DFE1C229A29584009F3258 /* HomeRouter.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,8 +336,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				64B9B04529A184BD00C1A54F /* LaunchScreen.storyboard in Resources */,
+				64DFE1A529A28A56009F3258 /* SplashView.xib in Resources */,
 				64B9B04229A184BD00C1A54F /* Assets.xcassets in Resources */,
 				64B9B04029A184BC00C1A54F /* Main.storyboard in Resources */,
+				64DFE1AD29A290AD009F3258 /* Pacifico-Regular.ttf in Resources */,
+				64DFE1BF29A29572009F3258 /* HomeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,11 +366,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				64B9B03D29A184BC00C1A54F /* ViewController.swift in Sources */,
+				64DFE1BE29A29572009F3258 /* HomeView.swift in Sources */,
+				64DFE1A929A28A69009F3258 /* SplashPresenter.swift in Sources */,
+				64DFE1C129A2957E009F3258 /* HomePresenter.swift in Sources */,
+				64DFE1A429A28A56009F3258 /* SplashView.swift in Sources */,
+				64DFE1C329A29584009F3258 /* HomeRouter.swift in Sources */,
 				64B9B07129A186A400C1A54F /* Character.swift in Sources */,
+				64DFE1BB29A294FB009F3258 /* HomeInteractor.swift in Sources */,
 				64B9B07A29A1955B00C1A54F /* Response.swift in Sources */,
+				64DFE1A729A28A61009F3258 /* SplashInteractor.swift in Sources */,
 				64B9B06C29A1851F00C1A54F /* Request.swift in Sources */,
 				64B9B03929A184BC00C1A54F /* AppDelegate.swift in Sources */,
+				64DFE1B029A293B3009F3258 /* UIView+Ext.swift in Sources */,
 				645F8C5A29A2561900FDB898 /* Service.swift in Sources */,
+				64DFE1AB29A28A71009F3258 /* SplashRouter.swift in Sources */,
 				64B9B03B29A184BC00C1A54F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

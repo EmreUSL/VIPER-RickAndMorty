@@ -22,7 +22,7 @@ final class Service: ServiceProtocol {
     
     private init() {}
     
-   func getService<T: Decodable>(characterId: Int?, type: T.Type, completion: @escaping (Result<T, ServiceError>) -> Void) {
+    func getService<T: Decodable>(characterId: Int?, type: T.Type, completion: @escaping (Result<T, ServiceError>) -> Void) {
         
         let urlString = getUrlString(id: characterId)
         
