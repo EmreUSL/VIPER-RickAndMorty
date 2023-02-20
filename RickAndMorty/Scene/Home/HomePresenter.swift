@@ -27,7 +27,8 @@ final class HomePresenter {
 extension HomePresenter: HomePresenterProtocol {
     func viewDidLoad() {
         view.setupUI()
-        view.setTitle("Characters")
+        view.setupCollectionView()
+        view.stopSpinner()
     }
     
 
