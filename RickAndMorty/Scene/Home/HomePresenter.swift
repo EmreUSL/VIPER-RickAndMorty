@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomePresenterProtocol: AnyObject {
-    
+   func viewDidLoad()
 }
 
 final class HomePresenter {
@@ -25,7 +25,12 @@ final class HomePresenter {
 }
 
 extension HomePresenter: HomePresenterProtocol {
+    func viewDidLoad() {
+        view.setupUI()
+        view.setTitle("Characters")
+    }
     
+
 }
 
 extension HomePresenter: HomeInteractorOutputProtocol {

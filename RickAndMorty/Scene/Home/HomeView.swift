@@ -8,7 +8,8 @@
 import UIKit
 
 protocol HomeViewProtocol: AnyObject {
-    
+    func setTitle(_ title: String)
+    func setupUI()
 }
 
 class HomeView: UIViewController {
@@ -17,12 +18,21 @@ class HomeView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.red
-        // Do any additional setup after loading the view.
+      
+        presenter.viewDidLoad()
+        
     }
 
 }
 
 extension HomeView: HomeViewProtocol {
+    func setupUI() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    func setTitle(_ title: String) {
+        self.title = title
+    }
+    
     
 }
