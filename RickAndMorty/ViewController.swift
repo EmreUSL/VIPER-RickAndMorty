@@ -13,15 +13,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        Service.shared.getService(characterId: 1, type: GetAllCharactersResponse.self) { result in
-            switch result {
-            case .success(let result):
-                print(result.results)
-            case .failure(let error):
-                print(error)
-            }
-        }
-    
+
+//        Service.request(router: Router.getCharacters, type: GetAllCharactersResponse.self) { result in
+//            switch result {
+//
+//            case .success(let result):
+//                print(result.results)
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
+        
+//        Service.request(router: Router.getCharacter(id: 1), type: Character.self) { result in
+//            switch result {
+//
+//            case .success(let result):
+//                print(result)
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
+
     }
 
 

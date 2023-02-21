@@ -18,8 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame:  UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
-        window?.rootViewController = SplashRouter.createModule()
-        
+        window?.rootViewController = UINavigationController(rootViewController: SplashRouter.createModule())
         return true
     }
 }

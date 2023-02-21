@@ -28,6 +28,7 @@ extension HomePresenter: HomePresenterProtocol {
     func viewDidLoad() {
         view.setupUI()
         view.setupCollectionView()
+        view.setupSpinner()
         view.stopSpinner()
     }
     

@@ -9,6 +9,7 @@ import UIKit
 
 protocol HomeViewProtocol: AnyObject {
     func setupUI()
+    func setupSpinner()
     func setupCollectionView()
     func stopSpinner()
 }
@@ -28,10 +29,11 @@ class HomeView: UIViewController {
 
 extension HomeView: HomeViewProtocol {
     
-    func setupUI() {
-      //  navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Characters"
-        
+    func setupUI() {    
+        title = "Characters"        
+    }
+    
+    func setupSpinner() {
         spinner = UIActivityIndicatorView(style: .large)
         spinner.hidesWhenStopped = true
         spinner.translatesAutoresizingMaskIntoConstraints = false
@@ -100,6 +102,7 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
         let width = (bounds.width - 30)/2
         return CGSize(width: width, height: width * 1.5)
     }
+
 }
 
 

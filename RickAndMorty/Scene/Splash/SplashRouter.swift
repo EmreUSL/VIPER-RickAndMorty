@@ -34,6 +34,7 @@ extension SplashRouter: SplashRouterProtocol {
         guard let window = viewController?.view.window else { return }
         let homeVC = HomeRouter.createModule()
         let navigationController = UINavigationController(rootViewController: homeVC)
+        navigationController.navigationBar.prefersLargeTitles = true
         window.rootViewController = navigationController
     }
     
