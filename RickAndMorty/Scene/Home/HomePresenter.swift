@@ -8,7 +8,10 @@
 import Foundation
 
 protocol HomePresenterProtocol: AnyObject {
-   func viewDidLoad()
+    func viewDidLoad()
+    var numberOfItems: Int { get }
+    func characters(_ index: Int) -> Character?
+    func navigate(_ model: Character)
 }
 
 final class HomePresenter {
@@ -16,6 +19,8 @@ final class HomePresenter {
     unowned var view: HomeViewProtocol!
     let router: HomeRouterProtocol!
     let interactor: HomeInteractorProtocol!
+    
+    private var characters: [Character] = []
   
     init(view: HomeViewProtocol!, router: HomeRouterProtocol!, interactor: HomeInteractorProtocol!) {
         self.view = view
@@ -25,16 +30,44 @@ final class HomePresenter {
 }
 
 extension HomePresenter: HomePresenterProtocol {
+  
     func viewDidLoad() {
         view.setupUI()
         view.setupCollectionView()
         view.setupSpinner()
         view.stopSpinner()
+        fetchData()
     }
     
+    private func fetchData() {
+        interactor.fetchCharacters()
+    }
+    
+    var numberOfItems: Int {
+        return characters.count
+    }
+    
+    func characters(_ index: Int) -> Character? {
+        return characters[index]
+    }
+    
+    func navigate(_ model: Character) {
+        router.navigate(model: model)
+    }
 
 }
 
 extension HomePresenter: HomeInteractorOutputProtocol {
+    func fetchCharactersOutput(result: CharactersResult) {
+        switch result {
+            
+        case .success(let result):
+            characters = result.results
+            view.reloadUI()
+        case .failure(let error):
+            print(error)
+        }
+    }
+    
     
 }

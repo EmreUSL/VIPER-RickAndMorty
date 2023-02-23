@@ -5,10 +5,10 @@
 //  Created by emre usul on 19.02.2023.
 //
 
-import Foundation
+import UIKit
 
 protocol HomeRouterProtocol: AnyObject {
-    
+    func navigate(model: Character)
 }
 
 final class HomeRouter {
@@ -28,5 +28,11 @@ final class HomeRouter {
 }
 
 extension HomeRouter: HomeRouterProtocol {
+    func navigate(model: Character) {
+        let detailVC = DetailRouter.createModule()
+        detailVC.characterDetail = model
+        viewController?.navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
     
 }

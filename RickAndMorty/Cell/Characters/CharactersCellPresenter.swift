@@ -28,5 +28,6 @@ extension CharactersCellPresenter: CharactersCellPresenterProtocol {
         view?.setName(characters.name)
         view?.setStatus(characters.status)
         view?.setImageURL(characters.image)
+        view?.setStatusViewColor(characters.status)
     }
 }

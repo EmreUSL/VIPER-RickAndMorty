@@ -12,6 +12,7 @@ protocol CharactersCellProtocol: AnyObject {
     func setImageURL(_ image: String)
     func setName(_ name: String)
     func setStatus(_ status: Status)
+    func setStatusViewColor(_ status: Status)
 }
 
 final class CharactersCell: UICollectionViewCell {
@@ -24,6 +25,8 @@ final class CharactersCell: UICollectionViewCell {
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = 10
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -35,6 +38,7 @@ final class CharactersCell: UICollectionViewCell {
         label.font = .systemFont(ofSize: 18,
                                  weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
         return label
     }()
     
@@ -47,6 +51,13 @@ final class CharactersCell: UICollectionViewCell {
         return label
     }()
     
+    private let statusView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.green
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     static let cellIdentifier = "CharactersCell"
     
     override init(frame: CGRect) {
@@ -55,6 +66,7 @@ final class CharactersCell: UICollectionViewCell {
         contentView.addSubview(imageView)
         contentView.addSubview(nameLabel)
         contentView.addSubview(statusLabel)
+        contentView.addSubview(statusView)
         addConstraints()
     }
     
@@ -65,23 +77,25 @@ final class CharactersCell: UICollectionViewCell {
     private func addConstraints() {
         NSLayoutConstraint.activate([
             statusLabel.heightAnchor.constraint(equalToConstant: 50),
-            nameLabel.heightAnchor.constraint(equalToConstant: 50),
-            
             statusLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
             statusLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5),
+            statusLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -3),
+         
+            statusView.heightAnchor.constraint(equalToConstant: 5),
+            statusView.leadingAnchor.constraint(equalTo: statusLabel.leadingAnchor),
+            statusView.trailingAnchor.constraint(equalTo: statusLabel.trailingAnchor),
+            statusView.bottomAnchor.constraint(equalTo: statusLabel.topAnchor, constant: -3),
+            
+            nameLabel.heightAnchor.constraint(equalToConstant: 50),
             nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
             nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5),
-            
-            statusLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -3),
-            nameLabel.bottomAnchor.constraint(equalTo: statusLabel.topAnchor, constant: -3),
-            
+            nameLabel.bottomAnchor.constraint(equalTo: statusView.topAnchor, constant: -3),
+         
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
             imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             imageView.bottomAnchor.constraint(equalTo: nameLabel.topAnchor, constant: -3),
-            
         ])
-        
     }
     
     override func prepareForReuse() {
@@ -90,8 +104,6 @@ final class CharactersCell: UICollectionViewCell {
         nameLabel.text = nil
         statusLabel.text = nil
     }
-    
-    
 }
 
 extension CharactersCell: CharactersCellProtocol {
@@ -108,5 +120,13 @@ extension CharactersCell: CharactersCellProtocol {
         statusLabel.text = status.rawValue
     }
     
-    
+    func setStatusViewColor(_ status: Status) {
+        if status.rawValue == "Alive" {
+            statusView.backgroundColor = UIColor.green
+        } else if status.rawValue == "Dead" {
+            statusView.backgroundColor = UIColor.red
+        } else {
+            statusView.backgroundColor = UIColor.gray
+        }
+    }
 }

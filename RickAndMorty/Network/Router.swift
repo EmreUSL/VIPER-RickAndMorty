@@ -10,12 +10,11 @@ import Foundation
 enum Router {
     
     case getCharacters
-    case getCharacter(id: Int)
     
     var scheme: String {
         switch self {
             
-        case .getCharacters, .getCharacter:
+        case .getCharacters:
             return "https"
         }
     }
@@ -23,7 +22,7 @@ enum Router {
     var host: String {
         switch self {
             
-        case .getCharacters, .getCharacter:
+        case .getCharacters:
             return "rickandmortyapi.com"
         }
     }
@@ -33,15 +32,13 @@ enum Router {
             
         case .getCharacters:
             return "/api/character"
-        case .getCharacter(id: let id):
-            return "/api/character/\(id)"
         }
     }
     
     var method: String {
         switch self {
             
-        case .getCharacters, .getCharacter:
+        case .getCharacters:
             return "GET"
         }
     }

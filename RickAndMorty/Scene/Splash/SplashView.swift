@@ -31,7 +31,6 @@ class SplashView: UIViewController {
 extension SplashView: SplashViewProtocol {
     
     func noInternetConnection() {
-        //TO DO: Show Alert
     }
     
     func animateImage() {
