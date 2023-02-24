@@ -15,13 +15,11 @@ protocol DetailPresenterProtocol: AnyObject {
 final class DetailPresenter {
     
     unowned var view: DetailViewProtocol!
-    let router: DetailRouterProtocol!
     
     private var characterDetail: Character?
     
-    init(view: DetailViewProtocol!, router: DetailRouterProtocol!) {
+    init(view: DetailViewProtocol) {
         self.view = view
-        self.router = router
     }
 }
 
