@@ -1,4 +1,4 @@
-# VIPER-RickAndMorty
+# RickAndMorty
 
 This is a RickAndMorty App.
 
